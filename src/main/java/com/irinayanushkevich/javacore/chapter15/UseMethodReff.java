@@ -16,7 +16,7 @@ class MyClass {
     }
 }
 
-class UseMethodRef {
+class UseMethodReff {
 
     static int compareMC(MyClass a, MyClass b) {
         return a.getVal() - b.getVal();
@@ -33,7 +33,7 @@ class UseMethodRef {
         al.add(new MyClass(3));
         al.add(new MyClass(7));
 
-        MyClass maxValObj = Collections.max(al, UseMethodRef::compareMC);
+        MyClass maxValObj = Collections.max(al, UseMethodReff::compareMC);
 
         System.out.println("Maximal value = " + maxValObj.getVal());
     }
