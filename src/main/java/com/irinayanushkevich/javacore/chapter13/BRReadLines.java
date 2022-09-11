@@ -1,4 +1,4 @@
-package main.java.com.irinayanushkevich.javacore.chapter_13;
+package main.java.com.irinayanushkevich.javacore.chapter13;
 
 import java.io.BufferedReader;
 import java.io.IOException;

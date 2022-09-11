@@ -1,4 +1,4 @@
-package main.java.com.irinayanushkevich.javacore.chapter_13;
+package main.java.com.irinayanushkevich.javacore.chapter13;
 
 // пример для среды Windows для реализации платформенно-ориентированного метода на языке С.
 
