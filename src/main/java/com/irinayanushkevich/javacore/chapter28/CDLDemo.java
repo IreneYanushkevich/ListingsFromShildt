@@ -1,0 +1,35 @@
+package main.java.com.irinayanushkevich.javacore.chapter28;
+
+import java.util.concurrent.CountDownLatch;
+
+class CDLDemo {
+
+    public static void main(String[] args) {
+        CountDownLatch cdl = new CountDownLatch(5);
+        System.out.println("Launching a thread of execution");
+
+        new MyThread(cdl);
+
+        try {
+            cdl.await();
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+        System.out.println("Completion of the Thread of execution");
+    }
+}
+
+class MyThread implements Runnable {
+    CountDownLatch latch;
+    MyThread(CountDownLatch c) {
+        latch = c;
+        new Thread(this).start();
+    }
+
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println(i);
+            latch.countDown();
+        }
+    }
+}
